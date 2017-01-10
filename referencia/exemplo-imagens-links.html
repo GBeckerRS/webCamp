@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo com Imagens, Links e novos estilos CSS</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/*
+			Vamos as dicas de estilo da semana?
+	
+			Sempre que você quiser aumentar ou diminuir o tamanho dos textos da sua página, você pode usar o estilo chamado (font-size).
+
+			Se você quiser estilizar os textos da página, você precisa conhecer os seguintes estilos:
+			color (mudar a cor do texto)
+			text-align (mudar a direção do texto)
+			font-weight: bold; (define o texto como negrito)
+			text-transform: uppercase; (define o texto para maiusculo)
+
+
+			Vejam o exemplo sendo utilizado no título da página. (#titulo)
+
+		*/
+
+		#titulo {
+			/* Alinha o texto no centro da página */
+			text-align: center;
+
+			/* Alterando o tamanho da fonte do título da página */
+			font-size: 18px;
+
+			/* Alterando a cor do texto */
+			color: #212121;
+
+			/* Alterando o texto para negrito */
+			font-weight: bold;
+
+			/* Definindo o texto para maiusculo */
+			text-transform: uppercase;
+		}
+
+		.sub-titulos {
+			color: #222;
+		}
+
+		#conteudo {
+
+			/* Tamanho da div de 60% da página */
+			width: 60%;
+
+			/* Bordar de 2pixels, feita de traços (dashed) com a cor #ddd (um tom de cinza) */
+			border: 2px dashed #ddd;
+
+			/* Alinha a div no centro da página (na horizontal) */
+			margin: 0 auto;
+
+			/* Definimos a altura da div para 400pixels */
+			height: 400px;
+		}
+
+		/* Vamos limitar o tamanho da imagem para 90% de largura e de altura */
+		#primeira-imagem {
+			width: 90%;
+			height: 90%;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<h1 id="titulo">Material da quarta semana do curso!</h1>
+
+    <h2 class="sub-titulos">Vamos falar sobre as imagens?</h2>
+
+	
+	<div id="conteudo">
+		
+		<!-- A Tag <img> define que o conteúdo do Elemento é uma imagem e os atributos que utilizamos são src e alt -->
+	    <img src="primeira-imagem.png" alt="Primeira imagem" id="primeira-imagem">
+
+		<!--
+			No exemplo acima definimos o caminho onde está a imagem com o Atributo src
+			e utilizamos o Atributo alt para descrever que imagem é essa (a utilização do atributo alt é altamente recomendado, pois,
+			mesmo que a imagem não seja carregada por qualquer motivo, o usuário conseguirá identificar que ali era para ser carregado).
+		-->
+
+		
+		<br><!-- Define uma linha em branco -->
+
+	  
+		<!-- Vamos ver um exemplo para quando a imagem não existe (veja que ele mostra o conteúdo do atributo alt da Tag img) -->
+	    <img src="segunda-imagem.png" alt="Segunda imagem">
+
+	</div>
+
+    <h2 class="sub-titulos">Vamos falar sobre os links?</h2>
+
+
+	<!--
+
+		Curiosidade:
+
+	    Existem Atributos em que os valores não precisam ser passados entre aspas, mas manter um padrão ajuda você e ajuda quem quer que seja que no futuro tenha que trabalhar com o seu HTML.
+	    Portanto, não é uma regra mas uma boa prática você envolver os valores dos Atributos entre aspas.
+    -->
+    
+    <!-- Isso funciona, mas não é recomendável -->
+    <a href="http://google.com.br" target=_blank>Ir para o site do Google - http://google.com.br</a>
+
+	<br><!-- Define uma linha em branco -->
+
+    <!-- Isso funciona e é recomendável -->
+    <a href="http://google.com.br" target="_blank">Ir para o site do Google - http://google.com.br</a>
+
+
+	<br><!-- Define uma linha em branco -->
+
+
+    <!--
+   		Já que usamos a tag a, vamos explicar como ela funciona!
+
+	    A tag a faz referencia aos links e possui alguns atributos como href e target.
+	    O conteúdo do atributo href é para onde a gente quer que o nosso link nos envie
+	    e o atributo target define se o link será aberto em uma nova aba do navegador ou na mesma aba.
+	    Vamos ver alguns exemplos:
+
+	-->
+
+	<a href="http://facebook.com" target="_blank">Abrir o site do Facebook em outra aba - http://facebook.com</a>
+
+	<br><!-- Define uma linha em branco -->
+	
+	<!-- Veja que a ausencia do atributo target, faz com que ao clicar no link da tag 'a', o site abra na mesma aba (página) -->
+	<a href="http://facebook.com">Abrir o site do Facebook nessa mesma aba (página) - http://facebook.com</a>
+
+	
+</body>
+</html>
